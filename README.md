@@ -10,11 +10,13 @@ A simple shopping cart application built with React.
    ```bash
    git clone https://github.com/Vince19/shopping-cart.git
    ```
-   React
-      react-router-dom
-      phosphor-react
-   Context API
-   CSS
+   
+Libraries Used:
+React
+   react-router-dom
+   phosphor-react
+Context API
+CSS
 
 # React + Vite
 
