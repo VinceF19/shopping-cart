@@ -11,8 +11,8 @@ A simple shopping cart application built with React.
    git clone https://github.com/Vince19/shopping-cart.git
    ```
    React
-   react-router-dom
-   phosphor-react
+      react-router-dom
+      phosphor-react
    Context API
    CSS
 
