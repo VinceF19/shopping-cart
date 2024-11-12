@@ -21,8 +21,7 @@ React
 CSS
 
 Context API
-
-<img width="1710" alt="Screenshot 2024-11-10 at 10 13 19 PM" src="https://github.com/user-attachments/assets/1d064aa2-f498-4635-b48c-f6452c96c6aa">
+<img width="1710" alt="Screenshot 2024-11-12 at 7 12 08 PM" src="https://github.com/user-attachments/assets/402a9e19-121f-4578-ab4a-b16c3b60435f">
 
 # React + Vite
 
