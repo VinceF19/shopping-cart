@@ -1,29 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const SearchBar = ({ products }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+const SearchBar = ({ query, setQuery }) => {
   return (
     <div>
       <input
         type="text"
-        placeholder="Search products..."
-        value={searchTerm}
-        onChange={handleChange}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Type here"
+        className="border-2 rounded-lg p-2 border-pink-300"
+        data-testid="search-text"
       />
-      <ul>
-        {filteredProducts.map((product) => (
-          <li key={product.id}>{product.name}</li>
-        ))}
-      </ul>
     </div>
   );
 };

@@ -1,12 +1,22 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { ShopContext } from '../components/shop-context';
 import { ProductContext } from '../components/ProductContext';
-import { SearchBar } from '../components/searchbar';
+import SearchBar from '../components/searchbar';
 import './shop.css';
 
 export const Shop = () => {
   const { products } = useContext(ProductContext);
   const { addToCart } = useContext(ShopContext);
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [query, setQuery] = useState('');
+
+  useEffect(() => {
+    setFilteredProducts(
+      products.filter((product) =>
+        product.title.toLowerCase().includes(query.toLowerCase())
+      )
+    );
+  }, [products, query]);
 
   const handleAddToCart = (product) => {
     addToCart(product.id);
@@ -19,10 +29,10 @@ export const Shop = () => {
         <h1>Shop Now!</h1>
       </div>
       <div className='searchbox'>
-        <SearchBar products={products} />
+        <SearchBar query={query} setQuery={setQuery} />
       </div>
       <div className='products-container'>
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
           <div className='product-card' key={product.id}>
             <img src={product.images[0]} alt={product.title} />
             <h3>{product.title}</h3>
