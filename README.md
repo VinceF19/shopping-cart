@@ -13,8 +13,8 @@ A simple shopping cart application built with React.
    
 Libraries Used:
 React
-   react-router-dom
-   phosphor-react
+--react-router-dom
+--phosphor-react
 Context API
 CSS
 
