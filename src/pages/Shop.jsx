@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ShopContext } from '../components/shop-context';
 import { ProductContext } from '../components/ProductContext';
+import { SearchBar } from '../components/searchbar';
 import './shop.css';
 
 export const Shop = () => {
@@ -16,6 +17,9 @@ export const Shop = () => {
     <div className='shop'>
       <div className='shop-title'>
         <h1>Shop Now!</h1>
+      </div>
+      <div className='searchbox'>
+        <SearchBar products={products} />
       </div>
       <div className='products-container'>
         {products.map((product) => (
